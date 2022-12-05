@@ -1,0 +1,39 @@
+yaar specs
+
+components:
+	layout (1)
+	tabs (1)
+	header (title) (0)
+	content (by page)
+		description (2)
+		images //
+		sub-tabs (1)
+		items (1)
+		
+	image galery (12)
+		manual
+		auto
+	image (1)
+	pdf preview (4)
+	
+pages:
+	home (1)
+	office (1)
+		person * 4 (4)
+	projects (1)
+		project (25)
+	news (1)
+		article (1)
+	contacts (0)
+	
+featues:
+	translations (10)
+	lazy-loading (2)
+	image-optimizer (3)
+	deployment (8)
+	
+======================= 80
+	
+		
+	
+	
