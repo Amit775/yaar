@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="tabs">
 		<span class="tab logo"> Logo </span>
-		<span class="tab" *ngFor="let tab of tabs | seperator : '|' ; let index=index"> 
+		<span class="tab" *ngFor="let tab of tabs | seperator : '|'" [routerLink]="tab.route"> 
 			{{ tab.display ?? tab }} 
 		</span>
 		<span class="langs tab">

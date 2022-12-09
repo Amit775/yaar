@@ -5,5 +5,7 @@
 		<div class="image"></div>
 	</div>
 	<div class="items"></div>
-	<div class="segments"></div>
+	<div class="categories">
+		<span class="category" *ngFor="let category of page.categories ?? [] | seperator : '|' "> {{ category.display ?? category }} </span>
+	</div>
 </div>

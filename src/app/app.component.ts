@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Tab } from './models/page.model';
+import { pages } from './pages/pages';
 
 @Component({
 	selector: 'app-root',
@@ -9,12 +10,7 @@ import { Tab } from './models/page.model';
 export class AppComponent {
 	title = 'yaar';
 
-	tabs: Tab[] = [
-		{ route: 'office', display: 'המשרד' },
-		{ route: 'projects', display: 'פרוייקטים' },
-		{ route: 'news', display: 'חדשות ופרסומים' },
-		{ route: 'contacts', display: 'קשר' },
-	];
+	tabs: Tab[] = pages;
 
 	languages: string[] = ['he', 'en']
 }

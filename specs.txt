@@ -10,7 +10,7 @@ components:
 		sub-tabs (1)
 		items (1)
 		
-	image galery (12)
+	image gallery (12)
 		manual
 		auto
 	image (1)
@@ -33,6 +33,8 @@ featues:
 	deployment (8)
 	
 ======================= 80
+
+when category is simply a page, it's a category with single item (: page). and items list is not visible
 	
 		
 	

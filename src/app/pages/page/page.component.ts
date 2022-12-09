@@ -1,16 +1,17 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import { Page } from 'src/app/models/page.model';
+import { Category, Page, Section } from 'src/app/models/page.model';
+import { SeperatorPipe } from 'src/app/shared/seperator.pipe';
 
 @Component({
 	selector: 'app-page',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [CommonModule, SeperatorPipe],
 	templateUrl: './page.component.html',
 	styleUrls: ['./page.component.scss']
 })
 export class PageComponent {
-	page$: Observable<Page> = inject(ActivatedRoute).data as Observable<Page>;
+	page$: Observable<Section> = inject(ActivatedRoute).data as Observable<Section>;
 }
