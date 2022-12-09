@@ -1,0 +1,34 @@
+.page {
+	display: flex;
+	flex-direction: column;
+
+	.header {
+		height: 40px;
+		font-size: larger;
+		font-weight: bolder;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: row;
+
+		.description {
+			flex: 1;
+		}
+
+		.image {
+			flex: 4;
+		}
+	}
+
+	.items {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+
+	.segments {
+		display: flex;
+		flex-direction: row;
+	}
+}

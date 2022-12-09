@@ -1,0 +1,27 @@
+.container {
+	display: flex;
+	flex-direction: column;
+
+	.tabs {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+
+		.tab {
+			height: 40px;
+			flex-grow: 1;
+			text-align: center;
+		}
+
+		.langs {
+			width: 80px;
+			display: flex;
+			flex-direction: row;
+
+			.lang {
+				flex: 1;
+			}
+		}
+
+	}
+}

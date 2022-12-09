@@ -1,0 +1,9 @@
+<div class="page" *ngIf="page$ | async as page">
+	<div class="header"> {{ page.title }} </div>
+	<div class="content">
+		<div class="description"> {{ page.description }} </div>
+		<div class="image"></div>
+	</div>
+	<div class="items"></div>
+	<div class="segments"></div>
+</div>
