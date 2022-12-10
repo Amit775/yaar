@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Tab } from './models/page.model';
-import { pages } from './pages/pages';
+import { Section } from './models/page.model';
+import { sections } from './pages/pages';
 
 @Component({
 	selector: 'app-root',
@@ -9,8 +9,9 @@ import { pages } from './pages/pages';
 })
 export class AppComponent {
 	title = 'yaar';
+	readonly seperator = { display: '|' };
 
-	tabs: Tab[] = pages;
+	tabs: Section[] = sections;
 
 	languages: string[] = ['he', 'en']
 }

@@ -1,8 +1,8 @@
 <div class="container">
 	<div class="tabs">
 		<span class="tab logo"> Logo </span>
-		<span class="tab" *ngFor="let tab of tabs | seperator : '|'" [routerLink]="tab.route"> 
-			{{ tab.display ?? tab }} 
+		<span class="tab" *ngFor="let tab of tabs | seperator : seperator" [routerLink]="tab.route"> 
+			{{ tab.display }} 
 		</span>
 		<span class="langs tab">
 			<span class="lang" *ngFor="let lang of languages"> {{ lang }} </span>

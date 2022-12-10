@@ -1,6 +1,6 @@
 import { Section } from "../models/page.model";
 
-export const pages: Section[] = [
+export const sections: Section[] = [
 	{
 		route: '',
 		description: 'home',
@@ -14,10 +14,50 @@ export const pages: Section[] = [
 		title: 'יער אדריכלים ומתכנני ערים',
 		image: 'someURL',
 		categories: [
-			{ display: 'יעקב יער' },
-			{ display: 'אורה יער' },
-			{ display: 'אביב יער' },
-			{ display: 'טלי קוסט יער' }
+			{
+				display: 'יעקב יער', route: 'yaakov-yaar', items: [
+					{
+						display: 'יעקב יער',
+						route: '',
+						description: 'יעקב יער',
+						image: 'someURL',
+						title: 'יעקב יער'
+					}
+				]
+			},
+			{
+				display: 'אורה יער', route: 'ora-yaar', items: [
+					{
+						display: 'אורה יער',
+						route: '',
+						description: 'אורה יער',
+						image: 'someURL',
+						title: 'אורה יער'
+					}
+				]
+			},
+			{
+				display: 'אביב יער', route: 'aviv-yaar', items: [
+					{
+						display: 'אביב יער',
+						route: '',
+						description: 'אביב יער',
+						image: 'someURL',
+						title: 'אביב יער'
+					}
+				]
+			},
+			{
+				display: 'טלי קוסט יער', route: 'tali-kost-yaar', items: [
+					{
+						display: 'טלי קוסט יער',
+						route: '',
+						description: 'טלי קוסט יער',
+						image: 'someURL',
+						title: 'טלי קוסט יער'
+					}
+				]
+			}
 		]
 	}, {
 		display: 'פרוייקטים',
@@ -35,16 +75,19 @@ export const pages: Section[] = [
 		categories: [
 			{
 				display: 'מגורים',
-				items: [{
-					title: 'כיכר השוק - מתחם השוק הסיטונאי בתל אביב 2006 - 1999',
-					display: 'כיכר השוק - תל אביב',
-					description: '',
-					image: { images: [], manual: true },
-					route: 'market-square'
-				}]
+				route: 'residential',
+				items: [
+					{
+						title: 'כיכר השוק - מתחם השוק הסיטונאי בתל אביב 2006 - 1999',
+						display: 'כיכר השוק - תל אביב',
+						description: '',
+						image: { images: [], manual: true },
+						route: 'market-square'
+					}]
 			},
 			{
 				display: 'שימושים מעורבים',
+				route: 'mixed-use',
 				items: [{
 					title: 'מתחם סומייל - תל אביב 1997-2006',
 					display: 'סומייל - תל אביב',
@@ -55,6 +98,7 @@ export const pages: Section[] = [
 			},
 			{
 				display: 'בנייני ציבור',
+				route: 'public-buildings',
 				items: [{
 					title: 'קריית הטכניון - תכנית אב 1986-1988',
 					display: 'קריית הטכניון',
@@ -65,6 +109,7 @@ export const pages: Section[] = [
 			},
 			{
 				display: 'עיצוב עירוני ובינוי ערים',
+				route: 'urban-design',
 				items: [{
 					title: 'נמל יפו',
 					display: 'נמל יפו',
@@ -75,6 +120,7 @@ export const pages: Section[] = [
 			},
 			{
 				display: 'שימור והתחדשות',
+				route: 'preservation-and-renewal',
 				items: [{
 					title: 'יפו העתיקה 1960-1975',
 					display: 'יפו העתיקה',
@@ -85,6 +131,7 @@ export const pages: Section[] = [
 			},
 			{
 				display: 'תחרויות',
+				route: 'competitions',
 				items: [{
 					title: 'תחרות כלשהי',
 					display: 'תחרות',
@@ -103,34 +150,36 @@ export const pages: Section[] = [
 		categories: [
 			{
 				display: 'חדשות',
+				route: 'news',
 				items: [
 					{
 						display: 'חדשות 1',
 						title: 'חדשות 1',
-						route: 'publications/news/1',
+						route: '1',
 						description: 'חדשות 1',
 						image: 'someURL'
 					}, {
 						display: 'חדשות 2',
 						title: 'חדשות 2',
-						route: 'publications/news/2',
+						route: '2',
 						description: 'חדשות 2',
 						image: 'someURL'
 					}
 				]
 			}, {
 				display: 'פרסומים',
+				route: 'publications',
 				items: [
 					{
 						display: 'פרסומים 1',
 						title: 'פרסומים 1',
-						route: 'publications/pub/1',
+						route: '1',
 						description: 'פרסומים 1',
 						image: 'someURL'
 					}, {
 						display: 'פרסומים 2',
 						title: 'פרסומים 2',
-						route: 'publications/pub/2',
+						route: '2',
 						description: 'פרסומים 2',
 						image: 'someURL'
 					}

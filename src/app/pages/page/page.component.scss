@@ -1,7 +1,14 @@
 .page {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 
+	.right {
+		flex: 1;
+	}
+
+	.left { 
+		flex: 2;
+	}
 	.header {
 		height: 40px;
 		font-size: larger;
@@ -27,8 +34,9 @@
 		flex-wrap: nowrap;
 	}
 
-	.segments {
+	.categories {
 		display: flex;
+		justify-content: space-between;
 		flex-direction: row;
 	}
 }

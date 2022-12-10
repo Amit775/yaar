@@ -1,24 +1,21 @@
-export type Page = {
-	route: string;
+export type Page = Link & {
 	title: string;
 	description: string;
 	image: string | ImageGalleryOptions | ImageLink[];
 }
 
-type Display = {
+export type Link = {
+	route: string;
 	display: string;
+	redirectTo?: string;
 }
 
-export type Tab = Display & { route: string; }
-
-export type Item = Page & Display;
-
-export type Section = Page & Display & {
+export type Section = Page & {
 	categories?: Category[];
 }
 
-export type Category = Display & {
-	items?: Item[];
+export type Category = Link & {
+	items?: Page[];
 }
 
 export type ImageGalleryOptions = {
