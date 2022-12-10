@@ -7,7 +7,6 @@ export type Page = Link & {
 export type Link = {
 	route: string;
 	display: string;
-	redirectTo?: string;
 }
 
 export type Section = Page & {
@@ -15,6 +14,7 @@ export type Section = Page & {
 }
 
 export type Category = Link & {
+	redirectTo?: string;
 	items?: Page[];
 }
 

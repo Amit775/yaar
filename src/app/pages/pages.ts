@@ -15,7 +15,7 @@ export const sections: Section[] = [
 		image: 'someURL',
 		categories: [
 			{
-				display: 'יעקב יער', route: 'yaakov-yaar', items: [
+				display: 'יעקב יער', route: 'yaakov-yaar', redirectTo: '', items: [
 					{
 						display: 'יעקב יער',
 						route: '',
@@ -26,7 +26,7 @@ export const sections: Section[] = [
 				]
 			},
 			{
-				display: 'אורה יער', route: 'ora-yaar', items: [
+				display: 'אורה יער', route: 'ora-yaar', redirectTo: '', items: [
 					{
 						display: 'אורה יער',
 						route: '',
@@ -37,7 +37,7 @@ export const sections: Section[] = [
 				]
 			},
 			{
-				display: 'אביב יער', route: 'aviv-yaar', items: [
+				display: 'אביב יער', route: 'aviv-yaar', redirectTo: '', items: [
 					{
 						display: 'אביב יער',
 						route: '',
@@ -48,7 +48,7 @@ export const sections: Section[] = [
 				]
 			},
 			{
-				display: 'טלי קוסט יער', route: 'tali-kost-yaar', items: [
+				display: 'טלי קוסט יער', route: 'tali-kost-yaar', redirectTo: '', items: [
 					{
 						display: 'טלי קוסט יער',
 						route: '',
@@ -76,6 +76,7 @@ export const sections: Section[] = [
 			{
 				display: 'מגורים',
 				route: 'residential',
+				redirectTo: 'market-square',
 				items: [
 					{
 						title: 'כיכר השוק - מתחם השוק הסיטונאי בתל אביב 2006 - 1999',
@@ -88,6 +89,7 @@ export const sections: Section[] = [
 			{
 				display: 'שימושים מעורבים',
 				route: 'mixed-use',
+				redirectTo: 'somile',
 				items: [{
 					title: 'מתחם סומייל - תל אביב 1997-2006',
 					display: 'סומייל - תל אביב',
@@ -99,17 +101,19 @@ export const sections: Section[] = [
 			{
 				display: 'בנייני ציבור',
 				route: 'public-buildings',
+				redirectTo: 'technion-campus',
 				items: [{
 					title: 'קריית הטכניון - תכנית אב 1986-1988',
 					display: 'קריית הטכניון',
 					description: '',
 					image: { images: [], manual: true },
-					route: 'market-square'
+					route: 'technion-campus'
 				}]
 			},
 			{
 				display: 'עיצוב עירוני ובינוי ערים',
 				route: 'urban-design',
+				redirectTo: 'jaffa-port',
 				items: [{
 					title: 'נמל יפו',
 					display: 'נמל יפו',
@@ -121,6 +125,7 @@ export const sections: Section[] = [
 			{
 				display: 'שימור והתחדשות',
 				route: 'preservation-and-renewal',
+				redirectTo: 'old-jaffa',
 				items: [{
 					title: 'יפו העתיקה 1960-1975',
 					display: 'יפו העתיקה',
@@ -132,6 +137,7 @@ export const sections: Section[] = [
 			{
 				display: 'תחרויות',
 				route: 'competitions',
+				redirectTo: 'competition',
 				items: [{
 					title: 'תחרות כלשהי',
 					display: 'תחרות',
@@ -151,6 +157,7 @@ export const sections: Section[] = [
 			{
 				display: 'חדשות',
 				route: 'news',
+				redirectTo: '1',
 				items: [
 					{
 						display: 'חדשות 1',
@@ -169,6 +176,7 @@ export const sections: Section[] = [
 			}, {
 				display: 'פרסומים',
 				route: 'publications',
+				redirectTo: '1',
 				items: [
 					{
 						display: 'פרסומים 1',

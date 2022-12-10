@@ -28,13 +28,15 @@ pages:
 	
 featues:
 	translations (10)
-	lazy-loading (2)
+	routing (2)
 	image-optimizer (3)
 	deployment (8)
 	
 ======================= 80
 
 when category is simply a page, it's a category with single item (: page). and items list is not visible
+category is always redirecting to an item - category is not a page, its only a tab
+
 	
 		
 	
