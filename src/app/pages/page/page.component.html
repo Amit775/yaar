@@ -1,17 +1,23 @@
-<div class="page" *ngIf="section$ | async as page">
+<div class="page" *ngIf="page$ | async as page">
 	<div class="right">
 		<div class="header"> {{ page.title }} </div>
 		<div class="description"> {{ page | json }} </div>
 	</div>
 	<div class="left">
 		<div class="categories">
-			<ng-container *ngFor="let category of page.categories ?? [] | seperator : seperator ">
-				<span class="category" [routerLink]="category.route">
+			<ng-container *ngFor="let category of categories$ | async | seperator : seperator ">
+				<span class="category" [routerLink]="['/', (section$ | async)?.route, category.route]">
 					{{ category.display }}
 				</span>
 			</ng-container>
 		</div>
-		<div class="items"></div>
+		<div class="items">
+			<ng-container *ngFor="let item of items$ | async | seperator : seperator; let count=count;">
+				<span *ngIf="count > 3" class="item" [routerLink]="['/', (section$ | async)?.route, (selectedCategory$ | async)?.route, item.route]">
+					{{ item.display }}
+				</span>
+			</ng-container>
+		</div>
 		<div class="image"></div>
 	</div>
 </div>

@@ -5,6 +5,7 @@ import { PageComponent } from './pages/page/page.component';
 import { sections } from './pages/pages';
 
 function createRouteForPage(path: string, data: Page): Route {
+	if (data.description === 'home') console.log(path, data);
 	return { path, data, component: PageComponent };
 }
 function extractRoutes(sections: Section[]): Routes {
@@ -14,7 +15,7 @@ function extractRoutes(sections: Section[]): Routes {
 		section.categories?.forEach((category: Category) => {
 			const segments = [section.route, category.route];
 			routes.push({ path: segments.join('/'), redirectTo: [...segments, category.redirectTo].join('/') });
-			
+
 			const itemRoutes = category.items?.map(item => createRouteForPage([...segments, item.route].join('/'), item)) ?? [];
 			routes.push(...itemRoutes);
 		});
@@ -23,7 +24,10 @@ function extractRoutes(sections: Section[]): Routes {
 	console.table(routes);
 	return routes;
 }
-const routes: Routes = extractRoutes(sections);
+const routes: Routes = [
+	...extractRoutes(sections),
+	{ path: '**', redirectTo: '' }
+];
 
 @NgModule({
 	imports: [RouterModule.forRoot(routes)],
