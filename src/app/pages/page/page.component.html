@@ -5,15 +5,15 @@
 	</div>
 	<div class="left">
 		<div class="categories">
-			<ng-container *ngFor="let category of categories$ | async | seperator : seperator ">
+			<ng-container *ngFor="let category of categories$ | async">
 				<span class="category" [routerLink]="['/', (section$ | async)?.route, category.route]">
 					{{ category.display }}
 				</span>
 			</ng-container>
 		</div>
 		<div class="items">
-			<ng-container *ngFor="let item of items$ | async | seperator : seperator; let count=count;">
-				<span *ngIf="count > 3" class="item" [routerLink]="['/', (section$ | async)?.route, (selectedCategory$ | async)?.route, item.route]">
+			<ng-container *ngFor="let item of items$ | async; let count=count;">
+				<span *ngIf="count > 1" class="item" [routerLink]="['/', (section$ | async)?.route, (selectedCategory$ | async)?.route, item.route]">
 					{{ item.display }}
 				</span>
 			</ng-container>

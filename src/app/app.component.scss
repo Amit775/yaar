@@ -9,12 +9,13 @@
 
 		.tab {
 			height: 40px;
-			flex-grow: 1;
+			line-height: 40px;
+			width: 100%;
 			text-align: center;
+			border-left: 1px solid black;
 		}
 
 		.langs {
-			width: 80px;
 			display: flex;
 			flex-direction: row;
 
