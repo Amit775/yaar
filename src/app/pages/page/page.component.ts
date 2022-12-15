@@ -1,10 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterModule, UrlSegment } from '@angular/router';
 import { filter, map, MonoTypeOperatorFunction, Observable, tap } from 'rxjs';
 import { Category, Page, Section } from 'src/app/models/page.model';
-import { SeperatorPipe } from 'src/app/shared/seperator.pipe';
-import { sections } from '../pages';
 import { PagesService } from '../pages.service';
 
 function debug<T>(name: string): MonoTypeOperatorFunction<T> {
@@ -15,11 +13,12 @@ function debug<T>(name: string): MonoTypeOperatorFunction<T> {
 @Component({
 	selector: 'app-page',
 	standalone: true,
-	imports: [CommonModule, SeperatorPipe, RouterModule],
+	imports: [CommonModule, RouterModule],
 	templateUrl: './page.component.html',
-	styleUrls: ['./page.component.scss']
+	styleUrls: ['./page.component.scss'],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PageComponent implements OnInit {
+export class PageComponent {
 	route: ActivatedRoute = inject(ActivatedRoute);
 	page$: Observable<Page> = this.route.data as Observable<Page>;
 	section$: Observable<Section> = this.route.url.pipe(map(([section, _]: UrlSegment[]) => {
@@ -33,11 +32,5 @@ export class PageComponent implements OnInit {
 
 	items$ = this.selectedCategory$.pipe(map((category: Category) => category?.items), debug('items'));
 
-	readonly seperator = { display: '|' };
-
 	constructor(private service: PagesService) { }
-	ngOnInit(): void {
-		this.service.setPages(sections);
-		this.route.url.subscribe(x => console.log(x));
-	}
 }

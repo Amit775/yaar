@@ -5,7 +5,6 @@ import { PageComponent } from './pages/page/page.component';
 import { sections } from './pages/pages';
 
 function createRouteForPage(path: string, data: Page): Route {
-	if (data.description === 'home') console.log(path, data);
 	return { path, data, component: PageComponent };
 }
 function extractRoutes(sections: Section[]): Routes {

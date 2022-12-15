@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SeperatorPipe } from './shared/seperator.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,6 @@ import { SeperatorPipe } from './shared/seperator.pipe';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-	SeperatorPipe
   ],
   providers: [],
   bootstrap: [AppComponent]

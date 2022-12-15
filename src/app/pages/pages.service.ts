@@ -5,19 +5,29 @@ type HashSet<T> = Record<string, T>;
 
 @Injectable({ providedIn: 'root' })
 export class PagesService {
-	pages: HashSet<Page> = {};
-	categories: HashSet<Category> = {};
+	private _pages: HashSet<Page> = {};
+	public get pages(): Readonly<HashSet<Page>> { return this._pages; }
 
-	public setPages(sections: Section[]): void {
+	private _categories: HashSet<Category> = {};
+	public get categories(): Readonly<HashSet<Category>> { return this._categories; }
+
+	private _sections: HashSet<Section> = {}
+	public get sections(): Readonly<HashSet<Section>> { return this._sections; }
+
+
+	public setPages(sections: Section[]): Section[] {
 		sections.forEach((section: Section) => {
-			this.pages[section.route] = section;
+			this._sections[section.route] = section;
+			this._pages[section.route] = section;
 
 			section.categories?.forEach((category: Category) => {
-				this.categories[category.route] = category;
+				this._categories[category.route] = category;
 				category.items?.forEach((item: Page) => {
-					this.pages[item.route] = item;
+					this._pages[item.route] = item;
 				});
 			});
 		});
+
+		return sections;
 	}
 }
