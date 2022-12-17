@@ -17,7 +17,7 @@ export const sections: Section[] = [
 		route: '',
 		description: 'home',
 		title: 'יער',
-		image: { type: 'images-gallery', imageURLs, manual: false },
+		image: { type: 'images-gallery', imageURLs, autoplay: false },
 		display: 'יער אדריכלים'
 	}, {
 		route: 'office',
@@ -103,7 +103,7 @@ export const sections: Section[] = [
 						title: 'כיכר השוק - מתחם השוק הסיטונאי בתל אביב 2006 - 1999',
 						display: 'כיכר השוק - תל אביב',
 						description: '',
-						image: { type: "images-gallery", imageURLs, manual: true },
+						image: { type: "images-gallery", imageURLs, autoplay: true },
 						route: 'market-square'
 					}]
 			},
@@ -115,7 +115,7 @@ export const sections: Section[] = [
 					title: 'מתחם סומייל - תל אביב 1997-2006',
 					display: 'סומייל - תל אביב',
 					description: '',
-					image: { type: "images-gallery", imageURLs, manual: true },
+					image: { type: "images-gallery", imageURLs, autoplay: false },
 					route: 'somile'
 				}]
 			},
@@ -127,7 +127,7 @@ export const sections: Section[] = [
 					title: 'קריית הטכניון - תכנית אב 1986-1988',
 					display: 'קריית הטכניון',
 					description: '',
-					image: { type: "images-gallery", imageURLs, manual: true },
+					image: { type: "images-gallery", imageURLs, autoplay: true },
 					route: 'technion-campus'
 				}]
 			},
@@ -139,7 +139,7 @@ export const sections: Section[] = [
 					title: 'נמל יפו',
 					display: 'נמל יפו',
 					description: '',
-					image: { type: "images-gallery", imageURLs, manual: true },
+					image: { type: "images-gallery", imageURLs, autoplay: true },
 					route: 'jaffa-port'
 				}]
 			},
@@ -151,7 +151,7 @@ export const sections: Section[] = [
 					title: 'יפו העתיקה 1960-1975',
 					display: 'יפו העתיקה',
 					description: '',
-					image: { type: "images-gallery", imageURLs, manual: true },
+					image: { type: "images-gallery", imageURLs, autoplay: true },
 					route: 'old-jaffa'
 				}]
 			},
@@ -163,7 +163,7 @@ export const sections: Section[] = [
 					title: 'תחרות כלשהי',
 					display: 'תחרות',
 					description: '',
-					image: { type: "images-gallery", imageURLs, manual: true },
+					image: { type: "images-gallery", imageURLs, autoplay: true },
 					route: 'competition'
 				}]
 			}

@@ -12,7 +12,7 @@ export type SingleImageOption = {
 export type ImagesGalleyOption = {
 	type: 'images-gallery';
 	imageURLs: string[];
-	manual: boolean;
+	autoplay: boolean;
 }
 
 export type ImagesLinksOption = {
@@ -38,5 +38,5 @@ export type Category = Link & {
 
 export type ImageLink = {
 	imageURL: string;
-	route: string;
+	route?: string;
 }

@@ -11,6 +11,7 @@ function extractRoutes(sections: Section[]): Routes {
 	const routes: Routes = [];
 	sections.forEach((section: Section) => {
 		routes.push(createRouteForPage(section.route, section));
+
 		section.categories?.forEach((category: Category) => {
 			const segments = [section.route, category.route];
 			routes.push({ path: segments.join('/'), redirectTo: [...segments, category.redirectTo].join('/') });
@@ -20,7 +21,6 @@ function extractRoutes(sections: Section[]): Routes {
 		});
 	});
 
-	console.table(routes);
 	return routes;
 }
 const routes: Routes = [

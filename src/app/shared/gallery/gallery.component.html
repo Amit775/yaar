@@ -1,9 +1,10 @@
 <swiper [config]="config"
-		[class.single]="options.type === 'images-links'">
+		[ngClass]="options.type">
 	<ng-template swiperSlide
-				 *ngFor="let image of imagesURLs">
+				 *ngFor="let image of images; let index=index">
 		<div class="swiper-slide"
-			 style="background-image:url({{image}})">
+			 style="background-image:url( {{image.imageURL}} )"
+			 (click)="navigateByIndex(index)">
 		</div>
 	</ng-template>
 </swiper>
