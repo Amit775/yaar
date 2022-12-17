@@ -1,34 +1,44 @@
 .page {
 	display: flex;
 	flex-direction: row;
-	height: 100%;
+	height: calc(100vh - 40px);
+	width: 100vw;
 
 	.right {
-		flex: 1;
+		flex: 2;
 		display: flex;
 		flex-direction: column;
 
 		.header {
 			height: 40px;
+			line-height: 40px;
 			font-size: larger;
 			font-weight: bolder;
+			margin: auto;
 		}
 
 		.description {
 			flex-grow: 1;
-			max-height: calc(100% - 80px);
+			max-height: 100%;
 			overflow-y: auto;
+			overflow-x: hidden;
+			direction: ltr;
+
+			.text {
+				height: 100%;
+				direction: rtl;
+			}
 		}
 	}
 
 	.left {
-		flex: 2;
+		flex: 3;
 		display: flex;
 		flex-direction: column;
 		max-width: 60vw;
 
 		.image {
-			flex-grow: 1;
+			flex: 1 1 auto;
 		}
 
 		.items {
