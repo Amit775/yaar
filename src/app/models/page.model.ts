@@ -1,8 +1,26 @@
 export type Page = Link & {
 	title: string;
 	description: string;
-	image: string | ImageGalleryOptions | ImageLink[];
+	image: ImageOptions;
 }
+
+export type SingleImageOption = {
+	type: 'single-image';
+	imageURL: string;
+}
+
+export type ImagesGalleyOption = {
+	type: 'images-gallery';
+	imageURLs: string[];
+	manual: boolean;
+}
+
+export type ImagesLinksOption = {
+	type: 'images-links';
+	images: ImageLink[];
+}
+
+export type ImageOptions = SingleImageOption | ImagesGalleyOption | ImagesLinksOption;
 
 export type Link = {
 	route: string;
@@ -18,12 +36,7 @@ export type Category = Link & {
 	items?: Page[];
 }
 
-export type ImageGalleryOptions = {
-	images: string[];
-	manual: boolean;
-}
-
 export type ImageLink = {
-	image: string;
+	imageURL: string;
 	route: string;
 }

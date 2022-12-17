@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterModule, UrlSegment } from '@angular/router';
 import { filter, map, MonoTypeOperatorFunction, Observable, tap } from 'rxjs';
 import { Category, Page, Section } from 'src/app/models/page.model';
+import { GalleryComponent } from 'src/app/shared/gallery/gallery.component';
 import { PagesService } from '../pages.service';
 
 function debug<T>(name: string): MonoTypeOperatorFunction<T> {
@@ -13,7 +14,7 @@ function debug<T>(name: string): MonoTypeOperatorFunction<T> {
 @Component({
 	selector: 'app-page',
 	standalone: true,
-	imports: [CommonModule, RouterModule],
+	imports: [CommonModule, RouterModule, GalleryComponent],
 	templateUrl: './page.component.html',
 	styleUrls: ['./page.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush

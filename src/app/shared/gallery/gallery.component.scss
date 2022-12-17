@@ -1,0 +1,19 @@
+// @import 'node_modules/swiper/swiper.scss';
+// @import 'node_modules/swiper/modules/navigation/navigation.scss';
+// @import 'node_modules/swiper/modules/pagination/pagination.scss';
+// @import '~swiper/swiper.min.css';
+// @import '~swiper/modules/navigation/navigation.min.css';
+// @import '~swiper/modules/pagination/pagination.min.css';
+
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+@import 'swiper/scss/effect-coverflow';
+
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+	border: 1px solid black
+}
