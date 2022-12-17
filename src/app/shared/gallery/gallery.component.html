@@ -1,5 +1,5 @@
 <swiper [config]="config"
-		class="my-swiper">
+		[class.single]="options.type === 'images-links'">
 	<ng-template swiperSlide
 				 *ngFor="let image of imagesURLs">
 		<div class="swiper-slide"

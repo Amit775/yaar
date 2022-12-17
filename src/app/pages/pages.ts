@@ -24,7 +24,14 @@ export const sections: Section[] = [
 		description: 'Office',
 		display: 'המשרד',
 		title: 'יער אדריכלים ומתכנני ערים',
-		image: { type: 'single-image', imageURL: imageURLs[0] },
+		image: {
+			type: 'images-links', images: [
+				{ imageURL: 'http://yaar.yaar.net/images/stories/projects/office/4.jpg', route: '' },
+				{ imageURL: 'http://yaar.yaar.net/images/stories/projects/office/3.jpg', route: '' },
+				{ imageURL: 'http://yaar.yaar.net/images/stories/projects/office/2.jpg', route: '' },
+				{ imageURL: 'http://yaar.yaar.net/images/stories/projects/office/1.jpg', route: '' },
+			]
+		},
 		categories: [
 			{
 				display: 'יעקב יער', route: 'yaakov-yaar', redirectTo: '', items: [

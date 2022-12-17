@@ -1,13 +1,13 @@
 <div class="page"
 	 *ngIf="page$ | async as page">
-	<div class="right">
+	 <div class="right">
 		<div class="header"> {{ page.title }} </div>
 		<div class="description">
 			<div class="text"> {{ page | json }}</div>
 		</div>
 	</div>
 	<div class="left">
-		<div class="image"> <app-gallery></app-gallery> </div>
+		<div class="image"> <app-gallery [options]="page.image"></app-gallery> </div>
 		<div class="sub-nav">
 			<div class="items">
 				<ng-container *ngFor="let item of items$ | async; let count=count;">
